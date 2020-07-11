@@ -6,8 +6,13 @@
 </head>
 <body>
     <p>Hello world sdsd </p>
-    <h5>Tu bedzie auto</h5>
-    <p th:text="${car.getName()}" ></p>
-    <p th:text="${car.getMark()}" ></p>
+    <h5>Tu bedzie auta</h5>
+
+    <tr th:each="car: ${cars}">
+        <td th:text="${car.getName()}"></td>
+        <td th:text="${car.getMark()}"></td>
+        <br>
+    </tr>
+
 </body>
 </html>
